@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>A1EC13C3-164E-455D-8FCA-E5B1D4052BE8</string>
+				<string>A0FA1469-5B89-4A20-B5F9-88C61A956AA5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -54,27 +54,13 @@
 				<key>runningsubtext</key>
 				<string>Looking for Simulator in this computer</string>
 				<key>script</key>
-				<string>import simulator
+				<string>from simulator import Simulator
 
-def callback(ios,android):
-  print('&lt;?xml version="1.0"?&gt;')
-  print('&lt;items&gt;')
-  for item in ios:
-    print("  &lt;item uid=\"octal\" valid=\"yes\" arg=\""+item[1]+"\"&gt;")
-    print("    &lt;title&gt;"+item[0]+"&lt;/title&gt;")
-    print('    &lt;subtitle&gt;UDID: '+ item[1] +'&lt;/subtitle&gt;')
-    print('    &lt;icon&gt;ios.png&lt;/icon&gt;')
-    print('  &lt;/item&gt;')
-  for item in android:
-    print("  &lt;item uid=\"octal\" valid=\"yes\" arg=\"@"+item+"\"&gt;")
-    print("    &lt;title&gt;"+item+"&lt;/title&gt;")
-    print('    &lt;subtitle&gt;UDID: '+ item +'&lt;/subtitle&gt;')
-    print('    &lt;icon&gt;android.png&lt;/icon&gt;')
-    print('  &lt;/item&gt;')
-  print('&lt;/items&gt;')
+android_sdk = '{ANDROID_HOME}/'
 
+sim = Simulator(android_sdk)
 
-callback(simulator.ios_device_list(), simulator.android_device_list("/Users/Yourtion/Codes/Apps/AndroidSDK/"))
+sim.run()
 </string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -102,24 +88,20 @@ callback(simulator.ios_device_list(), simulator.android_device_list("/Users/Your
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>import sys
-import simulator
-
-query = sys.argv[1]
-simulator.lanch_sim(query)</string>
+				<string>echo `{query}`</string>
 				<key>scriptargtype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>A1EC13C3-164E-455D-8FCA-E5B1D4052BE8</string>
+			<string>A0FA1469-5B89-4A20-B5F9-88C61A956AA5</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -131,16 +113,16 @@ simulator.lanch_sim(query)</string>
 		<key>495996BB-7D25-4CC5-832A-371EBB5891AA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>100</integer>
+			<integer>50</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>40</integer>
 		</dict>
-		<key>A1EC13C3-164E-455D-8FCA-E5B1D4052BE8</key>
+		<key>A0FA1469-5B89-4A20-B5F9-88C61A956AA5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>440</integer>
+			<integer>350</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>40</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
